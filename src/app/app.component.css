@@ -1,0 +1,18 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 2fr 9fr;
+    height: 100vh;
+    grid-template-areas: 
+    "header header"
+    "navbar alumnos";
+}
+.header {
+    grid-area: header;
+}
+.alumnos {
+    grid-area: alumnos;
+}
+.navbar {
+    grid-area: navbar;
+}
