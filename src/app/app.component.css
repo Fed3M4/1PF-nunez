@@ -15,4 +15,6 @@
 }
 .navbar {
     grid-area: navbar;
+    background-color: blanchedalmond;
+    padding: 0;
 }
