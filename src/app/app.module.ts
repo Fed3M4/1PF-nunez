@@ -10,6 +10,7 @@ import { AlumnosComponent } from './componentes/alumnos/alumnos.component';
 import { ABMComponent } from './componentes/abm/abm.component';
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { TodosLosCursosComponent } from './componentes/todos-los-cursos/todos-los-cursos.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HeaderComponent,
     NavbarComponent,
     AlumnosComponent,
-    ABMComponent
+    ABMComponent,
+    TodosLosCursosComponent
   ],
   imports: [
     BrowserModule,

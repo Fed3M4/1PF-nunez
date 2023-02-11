@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TodosLosCursosComponent } from './componentes/todos-los-cursos/todos-los-cursos.component';
 
 @Component({
   selector: 'app-root',

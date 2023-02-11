@@ -1,3 +1,4 @@
-export interface profesor {
+export interface Profesor {
     nombre: string;
+    mail: string;
 }
