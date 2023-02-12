@@ -1,11 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
-import { TodosLosCursosComponent } from './componentes/todos-los-cursos/todos-los-cursos.component';
+import { Component } from '@angular/core';
+import { CursosServService } from './servicios/cursos-serv.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = '1PF-nunez';
 }

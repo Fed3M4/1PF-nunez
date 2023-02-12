@@ -24,12 +24,9 @@
     <tr mat-row *matRowDef="let row; columns: columnas"></tr>
 </table>
 <h2>Cursos disponibles:</h2>
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col" *ngFor="let element of cursos">
-            <button (click)="abrirCurso(curso)"></button>
-        </div>
+
+    <div class="d-flex flex-row justify-content-evenly align-items-center">
+        <a href="" *ngFor="let curso of cursos" class="d-flex flex-row justify-content-evenly align-items-center align-items-center cursosLi">
+            <h4>{{ curso.nombre }}</h4>
+        </a>
     </div>
-</div>
--->

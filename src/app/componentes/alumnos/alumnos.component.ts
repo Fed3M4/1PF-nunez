@@ -1,9 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Alumno } from "src/app/models/alumno";
-import { Curso } from 'src/app/models/curso';
-import { TodosLosCursosComponent } from '../todos-los-cursos/todos-los-cursos.component';
-import { MatDialog} from '@angular/material/dialog'
+import { CursosServService } from 'src/app/servicios/cursos-serv.service';
 
 @Component({
   selector: 'app-alumnos',
@@ -63,4 +61,11 @@ export class AlumnosComponent {
   ]
   dataSource: MatTableDataSource<Alumno> = new MatTableDataSource<Alumno>(this.alumnos);
   columnas: string[] = ['nombre', 'apellido', 'correo', 'inscriptoDesde', 'habilitado' ]
+
+  cursos: any;
+  constructor(private cursosServ: CursosServService) {}
+
+  ngOnInit(): void {
+    this.cursos = this.cursosServ.mostrarCursos();
+  }
 }
