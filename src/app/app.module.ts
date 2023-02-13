@@ -26,7 +26,8 @@ import { TodosLosCursosComponent } from './componentes/todos-los-cursos/todos-lo
     BrowserAnimationsModule,
     MaterialFlatModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialFlatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

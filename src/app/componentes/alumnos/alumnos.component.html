@@ -25,8 +25,8 @@
 </table>
 <h2>Cursos disponibles:</h2>
 
-    <div class="d-flex flex-row justify-content-evenly align-items-center">
-        <a href="" *ngFor="let curso of cursos" class="d-flex flex-row justify-content-evenly align-items-center align-items-center cursosLi">
-            <h4>{{ curso.nombre }}</h4>
-        </a>
+<div class="d-flex justify-content-evenly align-items-center">
+    <div class="d-flex flex-column justify-content-evenly align-items-center" *ngFor="let curso of cursos">
+        <button mat-raised-button class="d-flex flex-row justify-content-evenly align-items-center align-items-center cursosLi" (click)="abrirModal(curso)"><h4>{{ curso.nombre }}</h4></button>
     </div>
+</div>

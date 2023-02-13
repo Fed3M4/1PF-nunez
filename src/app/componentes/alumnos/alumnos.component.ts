@@ -1,7 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Alumno } from "src/app/models/alumno";
+import { Curso } from 'src/app/models/curso';
 import { CursosServService } from 'src/app/servicios/cursos-serv.service';
+import { TodosLosCursosComponent } from '../todos-los-cursos/todos-los-cursos.component';
 
 @Component({
   selector: 'app-alumnos',
@@ -63,9 +66,17 @@ export class AlumnosComponent {
   columnas: string[] = ['nombre', 'apellido', 'correo', 'inscriptoDesde', 'habilitado' ]
 
   cursos: any;
-  constructor(private cursosServ: CursosServService) {}
+  constructor(
+    private cursosServ: CursosServService,
+    private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.cursos = this.cursosServ.mostrarCursos();
+  }
+
+  abrirModal(curso: Curso) {
+    const dialogRef = this.dialog.open(TodosLosCursosComponent, {
+      data: curso
+    })
   }
 }
