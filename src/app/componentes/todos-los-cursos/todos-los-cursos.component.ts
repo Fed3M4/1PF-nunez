@@ -13,7 +13,7 @@ export class TodosLosCursosComponent implements OnInit {
   constructor(
     private cursosServ: CursosServService,
     private dialogRef: MatDialogRef<TodosLosCursosComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: Curso
     ) {}
 
   ngOnInit(): void {
